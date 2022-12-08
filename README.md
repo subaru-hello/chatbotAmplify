@@ -1,14 +1,16 @@
 ### バックエンド
-Amplify
- - DynamoDB
- - AppSync
- - Amplify CLI
- - GraphQL
- - Amplify api
+
+DynamoDB
+AppSync
+
+Amplify api
 
 ### フロントエンド
 React <br/>
 Material Design UI
 
 ### インフラ
-Amplify
+Amplify Hosting
+
+### BFF(バックエンドフォーフロントエンド)
+GraphQL
