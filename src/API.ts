@@ -2,18 +2,16 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateTodoInput = {
+export type CreateChatMessageInput = {
   id?: string | null,
-  name: string,
-  description?: string | null,
+  message: string,
 };
 
-export type ModelTodoConditionInput = {
-  name?: ModelStringInput | null,
-  description?: ModelStringInput | null,
-  and?: Array< ModelTodoConditionInput | null > | null,
-  or?: Array< ModelTodoConditionInput | null > | null,
-  not?: ModelTodoConditionInput | null,
+export type ModelChatMessageConditionInput = {
+  message?: ModelStringInput | null,
+  and?: Array< ModelChatMessageConditionInput | null > | null,
+  or?: Array< ModelChatMessageConditionInput | null > | null,
+  not?: ModelChatMessageConditionInput | null,
 };
 
 export type ModelStringInput = {
@@ -56,32 +54,29 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
-export type Todo = {
-  __typename: "Todo",
+export type ChatMessage = {
+  __typename: "ChatMessage",
   id: string,
-  name: string,
-  description?: string | null,
+  message: string,
   createdAt: string,
   updatedAt: string,
 };
 
-export type UpdateTodoInput = {
+export type UpdateChatMessageInput = {
   id: string,
-  name?: string | null,
-  description?: string | null,
+  message?: string | null,
 };
 
-export type DeleteTodoInput = {
+export type DeleteChatMessageInput = {
   id: string,
 };
 
-export type ModelTodoFilterInput = {
+export type ModelChatMessageFilterInput = {
   id?: ModelIDInput | null,
-  name?: ModelStringInput | null,
-  description?: ModelStringInput | null,
-  and?: Array< ModelTodoFilterInput | null > | null,
-  or?: Array< ModelTodoFilterInput | null > | null,
-  not?: ModelTodoFilterInput | null,
+  message?: ModelStringInput | null,
+  and?: Array< ModelChatMessageFilterInput | null > | null,
+  or?: Array< ModelChatMessageFilterInput | null > | null,
+  not?: ModelChatMessageFilterInput | null,
 };
 
 export type ModelIDInput = {
@@ -100,18 +95,17 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
-export type ModelTodoConnection = {
-  __typename: "ModelTodoConnection",
-  items:  Array<Todo | null >,
+export type ModelChatMessageConnection = {
+  __typename: "ModelChatMessageConnection",
+  items:  Array<ChatMessage | null >,
   nextToken?: string | null,
 };
 
-export type ModelSubscriptionTodoFilterInput = {
+export type ModelSubscriptionChatMessageFilterInput = {
   id?: ModelSubscriptionIDInput | null,
-  name?: ModelSubscriptionStringInput | null,
-  description?: ModelSubscriptionStringInput | null,
-  and?: Array< ModelSubscriptionTodoFilterInput | null > | null,
-  or?: Array< ModelSubscriptionTodoFilterInput | null > | null,
+  message?: ModelSubscriptionStringInput | null,
+  and?: Array< ModelSubscriptionChatMessageFilterInput | null > | null,
+  or?: Array< ModelSubscriptionChatMessageFilterInput | null > | null,
 };
 
 export type ModelSubscriptionIDInput = {
@@ -144,83 +138,78 @@ export type ModelSubscriptionStringInput = {
   notIn?: Array< string | null > | null,
 };
 
-export type CreateTodoMutationVariables = {
-  input: CreateTodoInput,
-  condition?: ModelTodoConditionInput | null,
+export type CreateChatMessageMutationVariables = {
+  input: CreateChatMessageInput,
+  condition?: ModelChatMessageConditionInput | null,
 };
 
-export type CreateTodoMutation = {
-  createTodo?:  {
-    __typename: "Todo",
+export type CreateChatMessageMutation = {
+  createChatMessage?:  {
+    __typename: "ChatMessage",
     id: string,
-    name: string,
-    description?: string | null,
+    message: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type UpdateTodoMutationVariables = {
-  input: UpdateTodoInput,
-  condition?: ModelTodoConditionInput | null,
+export type UpdateChatMessageMutationVariables = {
+  input: UpdateChatMessageInput,
+  condition?: ModelChatMessageConditionInput | null,
 };
 
-export type UpdateTodoMutation = {
-  updateTodo?:  {
-    __typename: "Todo",
+export type UpdateChatMessageMutation = {
+  updateChatMessage?:  {
+    __typename: "ChatMessage",
     id: string,
-    name: string,
-    description?: string | null,
+    message: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type DeleteTodoMutationVariables = {
-  input: DeleteTodoInput,
-  condition?: ModelTodoConditionInput | null,
+export type DeleteChatMessageMutationVariables = {
+  input: DeleteChatMessageInput,
+  condition?: ModelChatMessageConditionInput | null,
 };
 
-export type DeleteTodoMutation = {
-  deleteTodo?:  {
-    __typename: "Todo",
+export type DeleteChatMessageMutation = {
+  deleteChatMessage?:  {
+    __typename: "ChatMessage",
     id: string,
-    name: string,
-    description?: string | null,
+    message: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type GetTodoQueryVariables = {
+export type GetChatMessageQueryVariables = {
   id: string,
 };
 
-export type GetTodoQuery = {
-  getTodo?:  {
-    __typename: "Todo",
+export type GetChatMessageQuery = {
+  getChatMessage?:  {
+    __typename: "ChatMessage",
     id: string,
-    name: string,
-    description?: string | null,
+    message: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type ListTodosQueryVariables = {
-  filter?: ModelTodoFilterInput | null,
+export type ListChatMessagesQueryVariables = {
+  filter?: ModelChatMessageFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListTodosQuery = {
-  listTodos?:  {
-    __typename: "ModelTodoConnection",
+export type ListChatMessagesQuery = {
+  listChatMessages?:  {
+    __typename: "ModelChatMessageConnection",
     items:  Array< {
-      __typename: "Todo",
+      __typename: "ChatMessage",
       id: string,
-      name: string,
-      description?: string | null,
+      message: string,
       createdAt: string,
       updatedAt: string,
     } | null >,
@@ -228,46 +217,43 @@ export type ListTodosQuery = {
   } | null,
 };
 
-export type OnCreateTodoSubscriptionVariables = {
-  filter?: ModelSubscriptionTodoFilterInput | null,
+export type OnCreateChatMessageSubscriptionVariables = {
+  filter?: ModelSubscriptionChatMessageFilterInput | null,
 };
 
-export type OnCreateTodoSubscription = {
-  onCreateTodo?:  {
-    __typename: "Todo",
+export type OnCreateChatMessageSubscription = {
+  onCreateChatMessage?:  {
+    __typename: "ChatMessage",
     id: string,
-    name: string,
-    description?: string | null,
+    message: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnUpdateTodoSubscriptionVariables = {
-  filter?: ModelSubscriptionTodoFilterInput | null,
+export type OnUpdateChatMessageSubscriptionVariables = {
+  filter?: ModelSubscriptionChatMessageFilterInput | null,
 };
 
-export type OnUpdateTodoSubscription = {
-  onUpdateTodo?:  {
-    __typename: "Todo",
+export type OnUpdateChatMessageSubscription = {
+  onUpdateChatMessage?:  {
+    __typename: "ChatMessage",
     id: string,
-    name: string,
-    description?: string | null,
+    message: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnDeleteTodoSubscriptionVariables = {
-  filter?: ModelSubscriptionTodoFilterInput | null,
+export type OnDeleteChatMessageSubscriptionVariables = {
+  filter?: ModelSubscriptionChatMessageFilterInput | null,
 };
 
-export type OnDeleteTodoSubscription = {
-  onDeleteTodo?:  {
-    __typename: "Todo",
+export type OnDeleteChatMessageSubscription = {
+  onDeleteChatMessage?:  {
+    __typename: "ChatMessage",
     id: string,
-    name: string,
-    description?: string | null,
+    message: string,
     createdAt: string,
     updatedAt: string,
   } | null,

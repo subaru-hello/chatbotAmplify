@@ -2,34 +2,37 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateTodo = /* GraphQL */ `
-  subscription OnCreateTodo($filter: ModelSubscriptionTodoFilterInput) {
-    onCreateTodo(filter: $filter) {
+export const onCreateChatMessage = /* GraphQL */ `
+  subscription OnCreateChatMessage(
+    $filter: ModelSubscriptionChatMessageFilterInput
+  ) {
+    onCreateChatMessage(filter: $filter) {
       id
-      name
-      description
+      message
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateTodo = /* GraphQL */ `
-  subscription OnUpdateTodo($filter: ModelSubscriptionTodoFilterInput) {
-    onUpdateTodo(filter: $filter) {
+export const onUpdateChatMessage = /* GraphQL */ `
+  subscription OnUpdateChatMessage(
+    $filter: ModelSubscriptionChatMessageFilterInput
+  ) {
+    onUpdateChatMessage(filter: $filter) {
       id
-      name
-      description
+      message
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteTodo = /* GraphQL */ `
-  subscription OnDeleteTodo($filter: ModelSubscriptionTodoFilterInput) {
-    onDeleteTodo(filter: $filter) {
+export const onDeleteChatMessage = /* GraphQL */ `
+  subscription OnDeleteChatMessage(
+    $filter: ModelSubscriptionChatMessageFilterInput
+  ) {
+    onDeleteChatMessage(filter: $filter) {
       id
-      name
-      description
+      message
       createdAt
       updatedAt
     }

@@ -2,43 +2,40 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+export const createChatMessage = /* GraphQL */ `
+  mutation CreateChatMessage(
+    $input: CreateChatMessageInput!
+    $condition: ModelChatMessageConditionInput
   ) {
-    createTodo(input: $input, condition: $condition) {
+    createChatMessage(input: $input, condition: $condition) {
       id
-      name
-      description
+      message
       createdAt
       updatedAt
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const updateChatMessage = /* GraphQL */ `
+  mutation UpdateChatMessage(
+    $input: UpdateChatMessageInput!
+    $condition: ModelChatMessageConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    updateChatMessage(input: $input, condition: $condition) {
       id
-      name
-      description
+      message
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
+export const deleteChatMessage = /* GraphQL */ `
+  mutation DeleteChatMessage(
+    $input: DeleteChatMessageInput!
+    $condition: ModelChatMessageConditionInput
   ) {
-    deleteTodo(input: $input, condition: $condition) {
+    deleteChatMessage(input: $input, condition: $condition) {
       id
-      name
-      description
+      message
       createdAt
       updatedAt
     }
